@@ -2,6 +2,8 @@
 
 Aplikasi pelaporan dan manajemen barang hilang & temuan (**Lost & Found**) berbasis **RESTful API** yang terintegrasi dengan **AI Vision Service** untuk klasifikasi objek otomatis dan moderasi konten.
 
+> 💡 **Untuk Developer Frontend:** Lihat panduan integrasi lengkap dan contoh kode Fetch/Axios di **[FRONTEND_API_GUIDE.md](FRONTEND_API_GUIDE.md)**.
+
 ---
 
 ## 📌 Deskripsi Singkat Projek
