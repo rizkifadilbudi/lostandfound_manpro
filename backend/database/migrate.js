@@ -12,9 +12,14 @@ const dbConfig = {
 const targetDb = process.env.DB_NAME || "found_reports";
 
 /**
- * 1. Memastikan database target sudah ada di PostgreSQL
+ * 1. Memastikan database target sudah ada di PostgreSQL (khusus lokal)
  */
 const ensureDatabaseExists = async () => {
+  // Lewati jika menggunakan DATABASE_URL atau jika database cloud sudah bernama 'postgres'
+  if (process.env.DATABASE_URL || targetDb === "postgres") {
+    return;
+  }
+
   const client = new Client({
     ...dbConfig,
     database: "postgres",
