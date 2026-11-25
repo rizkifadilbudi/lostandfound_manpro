@@ -39,6 +39,10 @@ const Found = sequelize.define(
         notEmpty: { msg: "Tempat ditemukan tidak boleh kosong." },
       },
     },
+    lokasi_penitipan: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+    },
     kontak_penemu: {
       type: DataTypes.STRING(100),
       allowNull: true,

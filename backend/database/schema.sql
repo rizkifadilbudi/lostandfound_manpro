@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS founds (
     deskripsi TEXT,
     waktu_ditemukan TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     tempat_ditemukan VARCHAR(255) NOT NULL,
+    lokasi_penitipan VARCHAR(255),
     kontak_penemu VARCHAR(100),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

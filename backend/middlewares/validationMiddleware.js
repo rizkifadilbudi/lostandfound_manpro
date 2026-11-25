@@ -28,7 +28,10 @@ const validateFound = (req, res, next) => {
   req.body.category = category.trim();
   req.body.tempat_ditemukan = tempat_ditemukan.trim();
 
-  // Field opsional: deskripsi, waktu_ditemukan, kontak_penemu
+  // Field opsional: deskripsi, waktu_ditemukan, lokasi_penitipan, kontak_penemu
+  if (req.body.lokasi_penitipan && typeof req.body.lokasi_penitipan === "string") {
+    req.body.lokasi_penitipan = req.body.lokasi_penitipan.trim();
+  }
   if (req.body.kontak_penemu && typeof req.body.kontak_penemu === "string") {
     req.body.kontak_penemu = req.body.kontak_penemu.trim();
   }

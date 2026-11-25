@@ -12,6 +12,7 @@ const createFound = async (req, res) => {
       deskripsi,
       waktu_ditemukan,
       tempat_ditemukan,
+      lokasi_penitipan,
       kontak_penemu,
     } = req.body;
 
@@ -22,6 +23,7 @@ const createFound = async (req, res) => {
       deskripsi: deskripsi || null,
       waktu_ditemukan: waktu_ditemukan || new Date(),
       tempat_ditemukan,
+      lokasi_penitipan: lokasi_penitipan || null,
       kontak_penemu: kontak_penemu || null,
     });
 
@@ -58,6 +60,7 @@ const getAllFounds = async (req, res) => {
         { category: { [Op.iLike]: `%${search}%` } },
         { deskripsi: { [Op.iLike]: `%${search}%` } },
         { tempat_ditemukan: { [Op.iLike]: `%${search}%` } },
+        { lokasi_penitipan: { [Op.iLike]: `%${search}%` } },
       ];
     }
 

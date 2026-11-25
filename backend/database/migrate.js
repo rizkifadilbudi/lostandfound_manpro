@@ -67,7 +67,7 @@ const runMigration = async () => {
     console.log("-----------------------------------------");
     console.log("✅ Sinkronisasi Model Selesai:");
     console.log("   - Model: Admin  -> Tabel 'admins'");
-    console.log("   - Model: Found  -> Tabel 'founds' (label, category, deskripsi, waktu_ditemukan, tempat_ditemukan, kontak_penemu)");
+    console.log("   - Model: Found  -> Tabel 'founds' (label, category, deskripsi, waktu_ditemukan, tempat_ditemukan, lokasi_penitipan, kontak_penemu)");
     console.log("-----------------------------------------");
     console.log("🎉 Database siap digunakan!");
     console.log("=========================================");

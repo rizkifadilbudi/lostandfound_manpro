@@ -178,6 +178,7 @@ const adminCreateFound = async (req, res) => {
       deskripsi,
       waktu_ditemukan,
       tempat_ditemukan,
+      lokasi_penitipan,
       kontak_penemu,
     } = req.body;
 
@@ -194,6 +195,7 @@ const adminCreateFound = async (req, res) => {
       deskripsi: deskripsi || null,
       waktu_ditemukan: waktu_ditemukan || new Date(),
       tempat_ditemukan,
+      lokasi_penitipan: lokasi_penitipan || null,
       kontak_penemu: kontak_penemu || null,
     });
 
@@ -222,6 +224,7 @@ const adminUpdateFound = async (req, res) => {
       deskripsi,
       waktu_ditemukan,
       tempat_ditemukan,
+      lokasi_penitipan,
       kontak_penemu,
     } = req.body;
 
@@ -240,6 +243,7 @@ const adminUpdateFound = async (req, res) => {
       deskripsi: deskripsi !== undefined ? deskripsi : found.deskripsi,
       waktu_ditemukan: waktu_ditemukan !== undefined ? waktu_ditemukan : found.waktu_ditemukan,
       tempat_ditemukan: tempat_ditemukan !== undefined ? tempat_ditemukan : found.tempat_ditemukan,
+      lokasi_penitipan: lokasi_penitipan !== undefined ? lokasi_penitipan : found.lokasi_penitipan,
       kontak_penemu: kontak_penemu !== undefined ? kontak_penemu : found.kontak_penemu,
     });
 
